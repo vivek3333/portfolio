@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href={% static 'css/style.css' %}>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav id="navbar" class="flex s-around bg-color">
+      <div class="left-nav">
+        <h2 class="t-white">Portfolio</h2>
+      </div>
+      <div class="right-nav">
+        <ul class="flex">
+          <li>
+            <a href="#home" class="t-white roboto"
+              >Home <i class="fa-solid fa-house"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#about" class="t-white roboto"
+              >About Me <i class="fa-solid fa-user"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#skills" class="t-white roboto"
+              >Skills <i class="fa-solid fa-code"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#Projects" class="t-white roboto"
+              >Projects <i class="fas fa-project-diagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#Contact" class="t-white roboto"
+              >Contact <i class="fa-solid fa-rocket"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="flex s-around sw-80 m-auto">
+      <div class="home-left flex items-center">
+        <div class="home-content">
+          <h6 class="poppinss">Hi, I'm</h6>
+          <h1 class="t-white">Vivek Kumar</h1>
+          <h4 class="poppinss">Python Developer</h4>
+          <a
+            href="{% static 'pdf/Vivek kumar_resume_lat.pdf' %}"
+            target="_blank"
+          >
+            <button class="btn poppins">Resume</button></a>
+
+          <a class="btn live poppins" id="hireme" href="#Contact" 
+            ><button class="btn live poppins">Let's Talk</button> </a
+          >
+        </div>
+      </div>
+      <div class="home-right flex s-center items-center">
+        <div class="circle flex s-center items-center" id="mainImage">
+          <img src="{% static 'images/Kumar.jpg'%}" alt="" />
+        </div>
+      </div>
+    </section>0
+
+    <!-- About Section -->
+    <section id="about">
+      <h1 class="t-center my-2 t-white f-2">About Me</h1>
+      <div class="about-container flex s-around">
+        <div class="about-left flex s-center items-center">
+          <!-- Here in src replade the given link with your secondary image link -->
+          <img src="{%static 'images/dog.png'%}" alt="" style="width: 60%" />
+        </div>
+
+        <div class="about-right flex">
+          <div class="about-content">
+            <h1 class="t-white m-b-1 poppins">Vivek Kumar</h1>
+            <p class="t-white poppins">
+              I'm Vivek Kumar, a B.Tech student in Computer Science specializing in Artificial Intelligence & 
+              Machine Learning from GLA University, Mathura. 
+              I want to build practical and meaningful software. 
+              My experience in software development comes from projects 
+              I have completed like my real-time chat application Talk2Much built on the MERN stack and 
+              my parking space finder system that allows for video based slot detection based on OpenCV and NumPy.
+               I solve coding problems on LeetCode regularly and I have solved over 160 problems to date and I always enjoy learning new technologies that will help me grow and improve as a developer. I am looking forward to applying my knowledge and creativity to some real-world projects to make a positive contribution to the tech community.
+            </p>
+            <a class="btn" id="hireme" href="">Hire Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <h1 class="t-center my-2 t-white f-2">Skills</h1>
+      <div class="services-container flex s-around h-50">
+        <div class="skills-left flex s-center items-center">
+          <img src="{%static 'images/pro.jpg'%}" alt="" width="250px" height="360px"/>
+        </div>
+
+        <div class="skills-right flex items-center">
+          <div class="skillss-container">
+            <div class="python bar p-relative">
+              <span class="bar-content left t-white">Python</span
+              ><span class="bar-content right-skills t-white">90%</span>
+            </div>
+            <div class="django bar p-relative">
+              <span class="bar-content left t-white">Django</span
+              ><span class="bar-content right-skills t-white">90%</span>
+            </div>
+            <div class="machine bar p-relative">
+              <span class="bar-content left t-white">Machine Learning</span
+              ><span class="bar-content right-skills t-white">80%</span>
+            </div>
+            <div class="deep bar p-relative">
+              <span class="bar-content left t-white">Deep Learning</span
+              ><span class="bar-content right-skills t-white">80%</span>
+            </div>
+            <div class="html bar p-relative">
+              <span class="bar-content left t-white">HTML & CSS</span
+              ><span class="bar-content right-skills t-white">80%</span>
+            </div>
+            <div class="git bar p-relative">
+              <span class="bar-content left t-white">Git & GitHub</span
+              ><span class="bar-content right-skills t-white">70%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="Projects">
+        <h1 class=" t-center my-2 t-white f-2">Projects</h1>
+        <div class="projects-container flex s-center">
+            <div class="projects-item flex f-col s-center items-center">
+               
+                <h1 class="t-white poppins">Sentiment Analysis on IMDB reviews using LSTM</h1>
+                <p class="t-white poppins">Constructed a sentiment analysis model on the IMDb reviews dataset using a long short-term memory (LSTM)-based recurrent neural network using TensorFlow Keras. Done by implementing the preprocessing steps of tokenization, padding, and embeddings, performing model training and evaluation (after training and validation). Achieved strong performance of sentiment data that were balanced and deployed a prediction function for real-time text classification.</p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/vivek3333/Sentiment-Anaysis"
+                        target="_blanks" class="btn mx-1 m-top">GitHub</a>
+                    
+                </div>
+            </div>
+            <div class="projects-item flex f-col s-center items-center">
+               
+                <h1 class="t-white poppins">Parking Space Finder</h1>
+                <p class="t-white poppins">Parking Space Finder is a computer vision-based application designed to detect available parking slots in real time using video input. By capturing the top view of a parking lot through a camera, the system processes the feed using libraries like OpenCV and NumPy. It identifies each parking space's coordinates and applies image processing techniques to determine whether a car is present or not. The result is visually displayed on-screen, showing available and occupied spots.</p>
+                <div class="buttons flex s-around">
+                    <a href="https://github.com/vivek3333/Parking-Space-Finder" target="_blanks"
+                        class="btn mx-1 m-top">GitHub</a>
+                    
+                </div>
+            </div>
+           
+         </div>
+
+        </div>
+    </section>
+
+     <!-- Contact Me Section -->
+    <section id="Contact" class="m-b-1">
+        <h1 class=" t-center my-2 t-white f-2">Contact Me</h1>
+        <div class="contact-container flex s-around items-centers">
+            <div class="form" id="contactForm">
+                <form method="post" > 
+                    {% csrf_token %}
+                    <div class="name form-div">
+                        <input type="text" name="name" id="name" class="poppins" placeholder="Enter Your Name">
+                    </div>
+
+                    <div class="email form-div">
+                        <input type="email" name="email" id="" class="poppins" placeholder="Enter Your Email"
+                            required>
+                    </div>
+
+                    <div class="phone form-div">
+                        <input type="phone" name="number" id="" class="poppins" placeholder="Enter Your Phone"
+                            required>
+                    </div>
+                    
+                    <div class="textarea form-div">
+                        <textarea name="content" id="textarea" cols="30" rows="10" class="poppins"
+                            placeholder="Enter Messages"></textarea>
+                    </div>
+                    <button type="submit" class="btn poppins" id="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <ul class="flex s-center w-80 m-auto my-2 res">
+            <li><a href="#home" class="poppinss">Home</a></li>
+            <li><a href="#about" class="poppinss">About</a></li>
+            <li><a href="#skills" class="poppinss">Skills</a></li>
+            <li><a href="#Projects" class="poppinss">Projects</a></li>
+            <li><a href="#home" class="poppinss">Portfolio</a></li>
+        </ul>
+        <ul class="flex s-center w-80 font-awesome ">
+            <a href="https://www.linkedin.com/in/vivekkumar2448/" target="_blank">
+                <li><i class="fa-brands fa-linkedin-in"></i></li>
+            </a>
+            <a href="https://github.com/vivek3333" target="_blank">
+                <li><i class="fa-brands fa-github"></i></li>
+            </a>
+                <a href="https://www.instagram.com/vivek_kumar8088/saved/?hl=en" target="_blank">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+            </a>
+            
+        </ul>
+        
+
+    </footer>
+
+
+  </body>
+</html>
